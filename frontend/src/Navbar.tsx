@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import Logo from "./LogoPreflight.png";
@@ -8,7 +7,7 @@ const NavBar = () => {
   return (
     <Navbar bg="grey" expand="lg" style={{ backgroundColor: "#e3f2fd" }}>
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={Link as any} to="/">
           <img src={Logo} alt="My Photo App Logo" style={{ height: "40px" }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -17,18 +16,18 @@ const NavBar = () => {
             {/* You can add other left-aligned links here if needed */}
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link as any} to="/">
               Gallery
             </Nav.Link>
-            <Nav.Link as={Link} to="/instructor">
+            <Nav.Link as={Link as any} to="/instructor">
               Instructor
             </Nav.Link>
-            <Nav.Link as={Link} to="/creator">
+            <Nav.Link as={Link as any} to="/creator">
               Creator
             </Nav.Link>
             <Nav.Item>
               <Button
-                as={Link}
+                as={Link as any}
                 to="/upload"
                 variant="outline-primary"
                 className="btn-lg Button1"
