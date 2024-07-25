@@ -24,7 +24,8 @@ const Gallery = () => {
 
   return (
     <Layout>
-      <h3 className="mb-4">Gallery</h3>
+      <h3 className="mb-4 text-center">GALLERY</h3>
+      <hr />
       <Row>
         {photos.map((photo) => (
           <Col key={photo.id} xs={12} md={4} lg={3} className="mb-4">
