@@ -35,8 +35,8 @@ const Upload = () => {
       });
       setSuccess("File uploaded successfully!");
       setError(null);
-      fetchImages(); // Fetch images after successful upload
-      setSelectedImage(""); // Clear the preview after upload
+      fetchImages();
+      setSelectedImage("");
     } catch (error) {
       console.error("Error uploading file:", error);
       setSuccess(null);
@@ -83,7 +83,11 @@ const Upload = () => {
       <Form>
         <Form.Group controlId="formFile" className="mb-3">
           <Form.Label>Select Image</Form.Label>
-          <Form.Control type="file" onChange={handleFileChange} />
+          <Form.Control
+            type="file"
+            onChange={handleFileChange}
+            data-cy="file-input"
+          />
         </Form.Group>
         {selectedImage && (
           <div className="mb-3">
@@ -93,20 +97,25 @@ const Upload = () => {
               alt="Selected Image"
               width="200"
               thumbnail
+              data-cy="image-preview"
             />
           </div>
         )}
-        <Button variant="primary" onClick={handleUpload}>
+        <Button
+          variant="primary"
+          onClick={handleUpload}
+          data-cy="upload-button"
+        >
           Upload
         </Button>
       </Form>
       {error && (
-        <Alert variant="danger" className="mt-3">
+        <Alert variant="danger" className="mt-3" data-cy="error-message">
           {error}
         </Alert>
       )}
       {success && (
-        <Alert variant="success" className="mt-3">
+        <Alert variant="success" className="mt-3" data-cy="success-message">
           {success}
         </Alert>
       )}
@@ -121,11 +130,13 @@ const Upload = () => {
                 alt={`Image ${photo.id}`}
                 thumbnail
                 className="w-100"
+                data-cy={`photo-${photo.id}`}
               />
               <Button
                 variant="danger"
                 className="position-absolute top-0 end-0 m-2"
                 onClick={() => handleDelete(photo.path.split("/").pop()!)}
+                data-cy={`delete-button-${photo.id}`}
               >
                 Delete
               </Button>
