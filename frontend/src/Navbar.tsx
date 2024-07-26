@@ -1,3 +1,4 @@
+// import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Logo from "./LogoPreflight.png";
@@ -15,19 +16,19 @@ const NavBar = () => {
           <Nav className="me-auto ">
             {/* You can add other left-aligned links here if needed */}
           </Nav>
-          <Nav className="ms-auto">
-            <Nav.Link as={Link as any} to="/">
+          <Nav className="ms-auto ">
+            <Nav.Link as={Link as any} to="/" className="text-light">
               Gallery
             </Nav.Link>
-            <Nav.Link as={Link as any} to="/instructor">
-              Instructor
-            </Nav.Link>
-            <Nav.Link as={Link as any} to="/creator">
+            <Nav.Link as={Link as any} to="/creator" className="text-light">
               Creator
+            </Nav.Link>
+            <Nav.Link as={Link as any} to="/instructor" className="text-light">
+              Instructor
             </Nav.Link>
             <Nav.Item>
               <Nav.Link
-                as={Link as any}
+                as={Link}
                 to="/upload"
                 // variant="outline-primary"
                 // className="text-light"
