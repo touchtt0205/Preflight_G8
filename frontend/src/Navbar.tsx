@@ -17,32 +17,23 @@ const NavBar = () => {
             {/* You can add other left-aligned links here if needed */}
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link as={Link as any} to="/" className="text-light"  style={{padding: " 15px"}}>
+            <Nav.Link as={Link as any} to="/" className="text-light nav-link-hover"style={{padding: " 15px"}}>
               Gallery
             </Nav.Link>
-            <Nav.Link as={Link as any} to="/creator" className="text-light"  style={{ padding: "15px"}}>
+            <Nav.Link as={Link as any} to="/creator" className="text-light nav-link-hover"  style={{ padding: "15px"}}>
               Creator
             </Nav.Link>
-            <Nav.Link as={Link as any} to="/instructor" className="text-light" style={{padding: "15px"}}>
+            <Nav.Link as={Link as any} to="/instructor" className="text-light nav-link-hover" style={{padding: "15px"}}>
               Instructor
             </Nav.Link>
-            <Nav.Item>
+            <Nav.Item className="navlink">
               <Nav.Link
                 as={Link}
                 to="/upload"
                 // variant="outline-primary"
                 // className="text-light"
-                style={{
-                  fontSize: "15px",
-                  backgroundColor: "#ffffff",
-                  borderRadius: "25px",
-                  color: "#37517e",
-                  margin:" 0 0 15px 0",
-                  boxShadow:
-                    "0 6px 12px 0 rgba(0,0,0,0.2), 0 6px 15px 0 rgba(0,0,0,0.19)",
-                }}
               >
-                Start Upload
+              Start Upload
               </Nav.Link>
             </Nav.Item>
           </Nav>

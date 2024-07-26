@@ -689,3 +689,24 @@ body {
 .alertA {
   text-align: center;
 }
+.navlink{
+  font-size: 15px;
+  background-color:#ffffff;
+  border-radius: 25px;
+  color:#37517e;
+  border:#37517e 10px solid;
+  align-items: center;
+  display: flex;
+  padding: 0px 15px;
+  font-weight: 600;
+}
+.navlink:hover{
+  color: #ffffff;
+  transition: 0.3s;
+  background-color:rgb(114, 201, 255);
+}
+
+.nav-link-hover:hover{
+  font-size:large;  
+  transition:0.18s;
+}
