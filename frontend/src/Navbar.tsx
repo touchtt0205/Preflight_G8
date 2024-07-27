@@ -46,7 +46,7 @@ const NavBar = () => {
             >
               Instructor
             </Nav.Link>
-            <Nav.Item>
+            <Nav.Item className="navlink">
               <Nav.Link
                 as={Link}
                 to="/upload"
